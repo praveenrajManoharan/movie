@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> -->
+
+
+  <link rel="stylesheet" href="./signup.css">
+
+
+</head>
+<body>
+
+   <div class="cointainer">
+    <div class="form-box">
+      <form action="" name="formfile" onsubmit="return validation()">
+        <h2>Register</h2>
+        <p id="result"></p>
+        <div class="input-box">
+          <i class='bx bxs-user' ></i>
+          <input type="text"name="username" placeholder="username">
+        </div>
+        <div class="input-box">
+          <i class='bx bxs-envelope'></i>
+          <input type="email"name="Email" placeholder="email">
+        </div>
+        <div class="input-box">
+          <i class='bx bxs-lock-alt'></i>
+          <input type="password"name="password" placeholder="password">
+        </div>
+        <div class="input-box">
+          <i class='bx bxs-lock-alt'></i>
+          <input type="password"name="cpassword" placeholder="confirm_password">
+        </div>
+        <div class="button">
+          <input type="submit" class="btn" onclick="validation()"  value="Register">
+        </div>
+        <div class="group">
+          <span><a href="#">Forget-password</a></span>
+          <span><a href="#">Login</a></span>
+        </div>
+      </form>
+    </div>
+
+    <div class="contiainer1" id="contiainer1">
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+      <h2>Thank you...!</h2>
+      <p>Sucessful Registation Thank You</p>
+      <a href="./login.html"><button onclick="closeslide()">ok</button></a>
+    </div>
+    </div>
+   
+
+
+
+
+
+<script>
+
+    function validation() {
+      if (document.formfile.username.value=="") {
+        document.getElementById("result").innerHTML="enter username";
+        return false;
+      }
+      else if (document.formfile.Email.value=="") {
+        document.getElementById("result").innerHTML="enter your Email";
+        return false;
+      }
+      else if (document.formfile.password.value=="") {
+        document.getElementById("result").innerHTML="enter your password";
+        return false;
+      }
+      else if (document.formfile.password.value.length>=6) {  
+        document.getElementById("result").innerHTML="password must be 6 characters";
+        return false;
+      }
+      else if (document.formfile.cpassword.value=='') {
+        document.getElementById("result").innerHTML="enter confirm password";
+        return false;
+      }
+      else if (document.formfile.cpassword.value !== document.formfile.password.value) {
+        document.getElementById("result").innerHTML="password does not match";
+        return false;
+      }
+      else if (document.formfile.password.value == document.formfile.cpassword.value) {
+        contiainer1.classList.add("openpage")
+        return false;
+      }
+      else{
+
+      }
+    }
+    
+    var contiainer1=document.getElementById("contiainer1");
+    
+    function closeslide() {
+      contiainer1.classList.remove("openpage")
+      
+    }
+
+    function restart() {
+      
+    }
+
+    
+</script>
+
+
+
+</body>
+</html>

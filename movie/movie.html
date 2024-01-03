@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>movie Reviews</title>
+    <link rel="stylesheet" href="./movie.css">
+    <script src="https://kit.fontawesome.com/28d6173d15.js"></script>
+</head>
+<body>
+    <div class="head">
+        <i class="fa-solid fa-location-dot"></i>
+        <div class="land">
+        <select class="landmark">
+            <option><a href="#">Chennai</a></option>
+            <option><a href="#">Mumbai</a></option>
+            <option><a href="#">Dheli</a></option>
+            <option><a href="#">Puna</a></option>
+            <option><a href="#">Goa</a></option>
+            <option><a href="#">More</a></option>
+        </select>
+    </div>
+        <input type="name" placeholder="Search For Movies" class="search"><i class="fa-solid fa-magnifying-glass"></i>
+        <button class="button"> signin</button>
+        <button class="button1">Signup</button>
+        <div class="imgs">
+             <a href="#"><img src="./image/facebook logo-1.jpg" alt="" width="30px" height="35px" class="logo2"></a>
+             <a href="#"><img src="./image/WhatsApp Iogo-1.jpg" alt="" width="30px" height="35px" class="logo2"></a>
+             <a href="#"><img src="./image/twiter logo-1.jpg" alt="" width="30px" height="35px" class="logo2"></a>
+             <a href="#"><img src="./image/insta logo.jpg" alt="" width="30px" height="35px" class="logo2"></a>
+    </div>   
+    </div>
+    <div class="head1">
+       <nav>
+        <li><a href="#">Tamil</a></li>
+        <li><a href="#">English</a></li>
+        <li><a href="#">Telugu</a></li>
+        <li><a href="#">Malayalam</a></li>
+        <li><a href="#">Kannada</a></li>
+        <li><a href="#">Bengali</a></li>
+        <li><a href="#">Punjabi</a></li>
+        <li><a href="#">Marathi</a></li>
+    </nav>
+    </div>
+    <div class="head2">
+    <pre>Movies /Movie Reviews / <a href="#">Tamil</a></pre>
+   </div>
+   <div class="head3">
+    <pre>Trending hero's : <a href="#">Vijay</a>   <a href="#">Ajith</a>   <a href="#">Kamal Hasan</a>  <a href="#">Karthi</a>  <a href="#">Dhanush</a></pre>
+   </div>
+   <div class="bodyin">
+    <ul>
+    <li><h1>Tamil Movie Reviews</h1></li>
+    <li><input type="text" placeholder="Search For a Tamil Movies" class="Tamil"></li>
+    <li><p>Sort by:</p></li>
+    <li> <select>
+        <option>Released Date</option>
+        <option>Latest Movies</option>
+        <option>OTT Movies</option>
+        <option>Alphabetically</option>
+    </select></li>
+    </ul>
+     </div>
+
+
+     <div class="content">
+        <div class="movie1">
+            <img src="./image/movie1.jpg" alt="">
+        </div>
+        <div class="name">
+            <h2>MOVIE NAME : LEO (LCU)-U/A</h2>
+            <h2>Hero :<a href="#">Vijay</a></h2>
+            <h2>Heronie :<a href="#">Trisha Krishnan</a></h2>
+            <h2>Director :<a href="#">Lokesh Kanagaraj</a></h2>
+            <h2>Music by :<a href="#">Anirudh Ravichander</a></h2>
+            <h1 class="date">Released Date : <i class="fa-regular fa-calendar-check"></i>19 October 2023 (India)</h1>
+            <div class="moviestar">
+            <h2 class="rate">Rate Movie :
+                <span onclick="ratemovie()" id="movie-1" >★</span>
+                <span onclick="ratemovie()" id="movie-2" >★</span>
+                <span onclick="ratemovie()" id="movie-3" >★</span>
+                <span onclick="ratemovie()" id="movie-4" >★</span>
+                <span onclick="ratemovie()" id="movie-5" >★</span></h2>
+            </div>
+            <div class="catagery">
+            <button class="Action">Action</button><button class="Crime">Crime</button><button class="Drama">Drama</button>
+        </div>
+            <h2 class="done"><i class="fa-regular fa-thumbs-up"></i>602.4K are intrested</h2>
+            <div class="theaters" >
+            <button class="theater"><a href="#">2D,</a><a href="#">IMAX 2D</a></button><button class="theater1"><a href="#">Tamil,<a href="#">Kannada,</a><a href="#"></a><a href="#">Telugu,</a><a href="#">Hindi</a></button>
+        </div>
+        </div>
+
+        <div class="review-div">
+            <h1>Enter your Coments</h1>
+            <input type="text" placeholder="Enter your name" id="review-name">
+            <textarea placeholder="Type your comends" id="review-textarea" ></textarea>
+            <button id="toadd-review" onclick="submit()">Submit</button>
+        </div>
+     </div> 
+
+     <div class="coment-caintainer">
+        <div class="seeing-review">
+            <h1>praveen</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque distinctio alias ratione voluptatem. 
+                Quisquam nostrum dolorum quam animi deserunt,
+                 delectus debitis inventore eligendi modi. Esse, repudiandae rem voluptas magni possimus 
+                 et beatae facere ex est adipisci repellendus vel aperiam tempora cupiditate. 
+                Aliquam molestias possimus molestiae quo optio illo, commodi sed fuga minima reprehenderit magni nam odit iste, 
+                recusandae eos quaerat aspernatur. Ratione incidunt sapiente, atque quia pariatur nihil rem quo?</p>
+            <button onclick="deletereview(event)">Delete</button>
+        </div>
+     </div>
+
+     <div class="footer">
+
+        <h1>praveen</h1>
+        
+     </div>
+        
+        <script src="./movie.js"></script>
+</body>
+</html>
+
+
+
